@@ -1,0 +1,11 @@
+[package]
+name = "kaniko-compose-builder"
+version = "1.0.0"
+authors = ["Jonathan Krebs <jonathan.krebs@bruckbu.de>"]
+edition = "2018"
+
+[dependencies]
+serde = "*"
+serde_yaml = "*"
+serde_derive = "*"
+anyhow = "*"
