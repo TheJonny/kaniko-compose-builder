@@ -27,7 +27,7 @@ fn main() -> anyhow::Result<()> {
                 .arg("--context").arg(builddir)
                 .arg("--dockerfile").arg(format!("{}/Dockerfile", builddir))
                 .arg("--destination").arg(&service.image)
-                .arg("--insecure")
+                .args(&std::env::args().skip(1).collect::<Vec<String>>())
                 .spawn()?;
             let status = kaniko.wait()?;
             if status.success() {
