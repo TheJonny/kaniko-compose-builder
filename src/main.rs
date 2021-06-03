@@ -42,7 +42,7 @@ fn main() -> anyhow::Result<()> {
                 .spawn()?;
             let status = kaniko.wait()?;
             if status.success() {
-                println!("build and pushed {}", service.image);
+                println!("built and pushed {}", service.image);
             }
             else{
                 anyhow::bail!("kaniko failed for {}", service.image);
