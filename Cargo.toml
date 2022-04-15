@@ -5,7 +5,7 @@ authors = ["Jonathan Krebs <jonathan.krebs@bruckbu.de>"]
 edition = "2018"
 
 [dependencies]
-serde = "*"
+indexmap = { version = "*", features = ["serde-1"] }
+serde = { version = "*", features = ["derive"] }
 serde_yaml = "*"
-serde_derive = "*"
 anyhow = "*"

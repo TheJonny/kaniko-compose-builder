@@ -1,13 +1,13 @@
-use serde_derive::Deserialize;
+use serde::Deserialize;
 
-use std::collections::HashMap;
+use indexmap::IndexMap;
 
 use anyhow::Context;
 
 #[derive(Deserialize, Debug)]
 struct Compose {
     version: String,
-    services: HashMap<String, Service>
+    services: IndexMap<String, Service>
 }
 
 #[derive(Deserialize, Debug)]
